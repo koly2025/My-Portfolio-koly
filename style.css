@@ -1,0 +1,265 @@
+/* Resetting styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navbar Styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #111827; /* Dark background */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+nav h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+nav h2 span {
+  color: #10b981; /* Emerald */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 0;
+  position: relative;
+  display: block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect */
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #10b981; /* Green underline */
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #10b981; /* Green color on hover */
+  transform: scale(1.05); /* Slightly enlarge text */
+}
+
+nav ul li a:hover::after {
+  width: 100%; /* Underline effect on hover */
+}
+
+
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url('images/dark-gradient-background-v9vj0cpgzd3grcbr.jpg'); /* Background Image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 10%;
+  height: 100vh;
+}
+
+/* Hero Text */
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h3 {
+  font-size:2em;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+  margin: 20px 0;
+  color: #ff9800;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+}
+
+.hero .btn {
+  background-color: #ff9800;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.hero .btn:hover {
+  background-color: #e68900;
+}
+
+/* Hero Image */
+.hero-img {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-img img {
+  width: 700px; /* Adjust size */
+  height: auto;
+  border-radius: 200%; /* Circular Image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Technology Icons */
+.tech-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tech-icons img {
+  width: 50px; /* Adjust the size of icons */
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .hero-img {
+      margin-top: 20px;
+  }
+
+  .hero-img img {
+      width: 200px;
+  }
+}
+
+
+
+
+/* Projects Section */
+#projects {
+  padding: 50px 20px;
+}
+
+.project {
+  background-color: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #333;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact input, #contact textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  
+}
+
+#contact button {
+  background-color: #ff9800;
+  padding: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+#contact button:hover {
+  background-color: #e68900;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header nav ul {
+      display: block;
+      text-align: center;
+  }
+
+  header nav ul li {
+      margin: 10px 0;
+  }
+
+  .hero-text h1 {
+      font-size: 2.5em;
+  }
+
+  .skills-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .skill {
+      width: 80%;
+      margin-bottom: 20px;
+  }
+
+  #contact form {
+      width: 100%;
+  }
+}
